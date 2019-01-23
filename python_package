@@ -1,0 +1,8 @@
+
+Creating a python Package
+
+cookiecutter https://github.com/audreyr/cookiecutter-pypackage.git
+
+pypi
+travis ci
+py up badge
