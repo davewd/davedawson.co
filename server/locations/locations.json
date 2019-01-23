@@ -1,0 +1,18 @@
+{
+  "locations": [{
+      "country": "Australia",
+      "city": "Bondi",
+      "google_url": "https://www.google.com/maps/embed/v1/place?q=bondi%20beach&key=AIzaSyBE7dsNVr1BhBcgVi-eCWWsem8mP4OsrZM"
+    },
+    {
+      "country": "United States",
+      "city": "New York",
+      "google_url": "https://www.google.com/maps/embed/v1/place?q=bondi%20beach&key=AIzaSyBE7dsNVr1BhBcgVi-eCWWsem8mP4OsrZM"
+    },
+    {
+      "country": "England",
+      "city": "London",
+      "google_url": "https://www.google.com/maps/embed/v1/place?q=bondi%20beach&key=AIzaSyBE7dsNVr1BhBcgVi-eCWWsem8mP4OsrZM"
+    }
+  ]
+}

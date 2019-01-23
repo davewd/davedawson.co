@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+    <meta property="og:title" content="Manners maketh Man" />
+
+    <meta property="og:image" content="http://markcarlson.io/wp-content/uploads/2016/12/Heart_font_awesome.svg.png" />
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124572286-1"></script>
     <script>
@@ -42,7 +46,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 
 <body>
@@ -130,16 +135,12 @@
         // and the element must have CSS styling to give it width and height
         // optionally, a third argument with configuration options can be passed.
         // See below for more about options.
-        timeline_json = json.load('/timeline/timeline.json')
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && this.status == 200) {
-                var myArr = JSON.parse(this.responseText);
-                document.getElementById("demo").innerHTML = myArr[0];
-                }
-        };
-        xmlhttp.open("GET", "json_demo_array.txt", true);
-        xmlhttp.send();
+        //timeline_json = json.load('/timeline/timeline.json')
+        $.getJSON("./timeline/timeline.json", function (data) {
+        
+                window.timeline = new TL.Timeline('timeline-embed', data);
+            
+        });
       </script>
                     <div class="row">
                         <div class="col-md-4 col-sm-6">
@@ -165,7 +166,8 @@
                                     <strong>My work</strong>
                                 </h4>
                                 
-                                <a href="#portfolio" class="btn btn-light">Learn More</a>
+                                <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/davewd" data-size="large" aria-label="Follow @davewd on GitHub">Follow @davewd</a>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6">
