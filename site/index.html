@@ -2,6 +2,10 @@
 <html lang="en">
 
 <head>
+    <meta property="og:title" content="Manners maketh Man" />
+
+    <meta property="og:image" content="http://markcarlson.io/wp-content/uploads/2016/12/Heart_font_awesome.svg.png" />
+
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124572286-1"></script>
     <script>
@@ -26,6 +30,12 @@
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
 
+    <!-- Timeline.JS -->
+    <link title="timeline-styles" rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+    <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+
+
+
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
@@ -36,7 +46,8 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
 </head>
 
 <body>
@@ -112,6 +123,25 @@
                 <div class="col-lg-10 col-lg-offset-1">
                     <h2>In a Nutshell</h2>
                     <hr class="small">
+                    
+      <div id='timeline-embed' style="width: 100%; height: 600px"></div>
+
+      <!-- 3 -->
+      <script type="text/javascript">
+        // The TL.Timeline constructor takes at least two arguments:
+        // the id of the Timeline container (no '#'), and
+        // the URL to your JSON data file or Google spreadsheet.
+        // the id must refer to an element "above" this code,
+        // and the element must have CSS styling to give it width and height
+        // optionally, a third argument with configuration options can be passed.
+        // See below for more about options.
+        //timeline_json = json.load('/timeline/timeline.json')
+        $.getJSON("./timeline/timeline.json", function (data) {
+        
+                window.timeline = new TL.Timeline('timeline-embed', data);
+            
+        });
+      </script>
                     <div class="row">
                         <div class="col-md-4 col-sm-6">
                             <div class="service-item">
@@ -136,7 +166,8 @@
                                     <strong>My work</strong>
                                 </h4>
                                 
-                                <a href="#portfolio" class="btn btn-light">Learn More</a>
+                                <!-- Place this tag where you want the button to render. -->
+<a class="github-button" href="https://github.com/davewd" data-size="large" aria-label="Follow @davewd on GitHub">Follow @davewd</a>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6">
