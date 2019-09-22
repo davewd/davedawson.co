@@ -8,7 +8,7 @@ function App() {
       <header className="App-header">
         <h1>DaveDawson.co</h1>
         <p>
-          A place holder for great things....
+          A placeholder for great things....
         </p>
         <h5>Sydney based Quantiative Developer, Leader, Mentor, Do-er</h5>
       </header>
