@@ -1,25 +1,23 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
-import Form from 'react-bootstrap/Form'
-import FormControl from 'react-bootstrap/FormControl'
-import Button from 'react-bootstrap/Button'
+import OnlineIdentities from './OnlineIdentities'
+import ColourPalette from './ColourPalette'
+
 
 class NavHeader extends React.Component {
-
-    constructor(){
-        super();
-    }
 
     render(){
         return(
           <Navbar bg="dark" variant="dark">
-            <Navbar.Brand href="#home">DaveDawson.co</Navbar.Brand>
+            <Navbar.Brand href="#home">DD</Navbar.Brand>
             <Nav className="mr-auto">
-              <Nav.Link href="#home">Overview</Nav.Link>
-              <Nav.Link href="#features">Projects</Nav.Link>
-              <Nav.Link href="#pricing">Blog</Nav.Link>
+              <Nav.Link href="#overview">Overview</Nav.Link>
+              <Nav.Link href="#projects">Projects</Nav.Link>
+              <Nav.Link href="#blog">Blog</Nav.Link>
             </Nav>
+            <OnlineIdentities/>
+            <ColourPalette/>
           </Navbar>
         )
     }

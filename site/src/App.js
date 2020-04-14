@@ -1,25 +1,26 @@
 import React from 'react';
-import './App.css';
-import {NavHeader, OnlineIdentities} from './components'
+import {Landing, NavHeader, OnlineIdentities} from './components'
+import { Grid, Cell } from 'styled-css-grid';
+import { ThemeProvider } from "styled-components";
+import { GlobalStyles } from './global';
 
 function App() {
   return (
-    <div className="App">
+    <ThemeProvider theme={{ mode: 'yellow' }}>
+      <GlobalStyles/>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />  
       <NavHeader/>
-      <header className="App-header">
-        <h1>DaveDawson.co</h1>
-        <br/>
-        <p>
-          Product focused Quantitative Developer, enabling Institutional Finance with analytics & automation.
-        </p>
-        <br/>
-        <h5>Sydney based, Leader, Mentor and Do-er!</h5>
-        <br/>
-        <OnlineIdentities/>
-      </header>
-    </div>
+
+      <Grid columns={"100px 1fr 100px"} rows={"minmax(45px,auto) 1fr minmax(45px,auto)"}>
+      <Cell><sidebar className="App-sidebar"/></Cell>
+      <Cell>
+        <Landing/>
+      </Cell>
+      <Cell ><sidebar className="App-sidebar"/></Cell>
+      <Cell width={3} ><OnlineIdentities/></Cell>
+      </Grid>
+    </ThemeProvider>
   );
 }
 
