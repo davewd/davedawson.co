@@ -1,6 +1,6 @@
 export default {
-    .App-header {
-        color: rgba(251, 255, 0, 0.75);
+    App-header {
+        color: rgba(50, 50, 50, 0.75);
         min-height: 100vh;
         display: flex;
         flex-direction: column;
