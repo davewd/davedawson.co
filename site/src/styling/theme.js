@@ -9,7 +9,9 @@ export const backgroundColor = theme('mode', {
 
 export const textColor = theme('mode', {
   light: '#000',
-  dark: '#fff'
+  dark: '#fff',
+  yellow: '#0077ff',
+  blue: '#fbff00'
 });
 
 export const buttonBackgroundColor = theme('mode', {

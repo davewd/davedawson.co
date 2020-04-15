@@ -17,7 +17,8 @@
     "styled-components": "5.0.1",
     "styled-css-grid": "^1.2.1",
     "styled-grid-component": "^1.1.13",
-    "styled-theming": "^2.2.0"
+    "styled-theming": "^2.2.0",
+    "three": "^0.115.0"
   },
   "scripts": {
     "start": "react-scripts start",
