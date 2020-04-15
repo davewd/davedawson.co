@@ -1,12 +1,27 @@
 import React from 'react';
 import {Landing, NavHeader, OnlineIdentities} from './components'
 import { Grid, Cell } from 'styled-css-grid';
-import { ThemeProvider } from "styled-components";
-import { GlobalStyles } from './global';
+import styled, { withTheme } from 'styled-components';
+import { GlobalStyles } from './styling/global';
+import { buttonBackgroundColor, buttonTextColor } from './styling/theme';
+import { useTheme } from './styling/ThemeContext';
 
-function App() {
+function App (props) {
+  const themeToggle = useTheme();
+
+  const Button = styled.button`
+    background: ${buttonBackgroundColor};
+    border: none;
+    border-radius: 0.3em;
+    box-shadow: none;
+    color: ${buttonTextColor};
+    cursor: pointer;
+    font-size: 1em;
+    padding: 0.5em 1em;
+  `;
+  
   return (
-    <ThemeProvider theme={{ mode: 'yellow' }}>
+    <div>
       <GlobalStyles/>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />  
@@ -16,12 +31,15 @@ function App() {
       <Cell><sidebar className="App-sidebar"/></Cell>
       <Cell>
         <Landing/>
+        <Button onClick={() => themeToggle.toggle()}>
+          {props.theme.mode === 'dark' ? "Switch to Light Mode" : "Switch to Dark Mode"}
+        </Button>
       </Cell>
       <Cell ><sidebar className="App-sidebar"/></Cell>
       <Cell width={3} ><OnlineIdentities/></Cell>
       </Grid>
-    </ThemeProvider>
+      </div>
   );
 }
 
-export default App;
+export default withTheme(App);
