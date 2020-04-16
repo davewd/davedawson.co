@@ -2,7 +2,9 @@ import React from "react";
 import styled, { ThemeProvider } from 'styled-components';
 import { backgroundColor, textColor } from './theme';
 
+// #global 
 const ThemeToggleContext = React.createContext();
+
 
 export const useTheme = () => React.useContext(ThemeToggleContext);
 
@@ -18,10 +20,10 @@ export const MyThemeProvider = ({ children }) => {
   `;
 
   const toggle = () => {
+    // Sets the context data - using the concept of a React Context
     var themes = ['light','dark','yellow','blue']
     var curr_index = themes.indexOf(themeState.mode)
     const mode = themes[ (curr_index+1) % themes.length];
-    console.log(mode);
     setThemeState({ mode: mode });
   };
 
