@@ -30,11 +30,11 @@ class OnlineIdentities extends React.Component{
         return(
             <StyledOnlineIdentitiesWrapper>
                 <ul>
-                    <li><a href="mailto:davedawson.co@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a></li>
-                    <li><a href="https://www.linkedin.com/in/davewd/"><FontAwesomeIcon icon={faLinkedin} /></a></li>
-                    <li><a href="https://twitter.com/davedawson_co"><FontAwesomeIcon icon={faTwitter} /></a></li>
-                    <li><a href="https://github.com/davewd"><FontAwesomeIcon icon={faGithub} /></a></li>
-                    <li><a href="https://dribbble.com/davewd"><FontAwesomeIcon icon={faDribbble}/></a></li>
+                    <li><a href="mailto:davedawson.co@gmail.com" target="_blank"><FontAwesomeIcon icon={faEnvelope} /></a></li>
+                    <li><a href="https://www.linkedin.com/in/davewd/" target="_blank"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+                    <li><a href="https://twitter.com/davedawson_co" target="_blank"><FontAwesomeIcon icon={faTwitter} /></a></li>
+                    <li><a href="https://github.com/davewd" target="_blank"><FontAwesomeIcon icon={faGithub} /></a></li>
+                    <li><a href="https://dribbble.com/davewd" target="_blank"><FontAwesomeIcon icon={faDribbble}/></a></li>
                 </ul>
             </StyledOnlineIdentitiesWrapper>
 
