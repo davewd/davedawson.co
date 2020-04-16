@@ -32,7 +32,7 @@ class Landing extends React.Component{
                 Product focused Quantitative Development lead, enabling Institutional Finance with analytics & automation.
               </p>
               <br/>
-              <h5>Sydney based, Leader, Mentor and Do-er!</h5>
+              <h5>Sydney based, Leader, Mentor and Implementor!</h5>
               <br/>
             </ShadowBox>
           </StyledWrapper>
