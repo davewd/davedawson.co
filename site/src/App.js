@@ -31,9 +31,6 @@ function App (props) {
       <Cell><sidebar className="App-sidebar"/></Cell>
       <Cell>
         <Landing/>
-        <Button onClick={() => themeToggle.toggle()}>
-          {props.theme.mode === 'dark' ? "Switch to Light Mode" : "Switch to Dark Mode"}
-        </Button>
       </Cell>
       <Cell ><sidebar className="App-sidebar"/></Cell>
       <Cell width={3} ><OnlineIdentities/></Cell>
