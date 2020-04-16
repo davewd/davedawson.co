@@ -3,8 +3,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPalette} from '@fortawesome/free-solid-svg-icons'
 import styled from 'styled-components'
 import { useTheme } from '../styling/ThemeContext';
-
+import { backgroundColor, textColor} from '../styling/theme'
 const StyledColourPaletteWrapper = styled.div`
+  button {
+    background-color: Transparent;
+    color: ${textColor};
+    border: none
+  }
   ul {
     list-style-type: none;
     display: inline;  
@@ -25,7 +30,7 @@ function ColourPalette (props){
     return(
         <StyledColourPaletteWrapper>
             <ul>
-                <li><a onClick={() => themeToggle.toggle()}><FontAwesomeIcon icon={faPalette} /></a></li>
+                <li><button onClick={() => themeToggle.toggle()}><FontAwesomeIcon icon={faPalette} /></button></li>
             </ul>
         </StyledColourPaletteWrapper>
     )
