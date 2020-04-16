@@ -1,8 +1,22 @@
 import theme from 'styled-theming'
 
+export const boxBackgroundColor = theme('mode', {
+  light: '#ffffff',
+  dark: '#222',
+  yellow: '#fbff00',
+  blue: '#0077ff'
+});
+
+export const boxShadowColor = theme('mode', {
+  light: '#777',
+  dark: '#222',
+  yellow: '#fbff00',
+  blue: '#0077ff'
+});
+
 export const backgroundColor = theme('mode', {
   light: '#fafafa',
-  dark: '#222',
+  dark: '#000000',
   yellow: '#fbff00',
   blue: '#0077ff'
 });
@@ -16,10 +30,14 @@ export const textColor = theme('mode', {
 
 export const buttonBackgroundColor = theme('mode', {
   light: '#222',
-  dark: '#eee'
+  dark: '#eee',
+  yellow: '#0077ff',
+  blue: '#fbff00'
 });
 
 export const buttonTextColor = theme('mode', {
   light: '#eee',
-  dark: '#222'
+  dark: '#222',
+  yellow: '#0077ff',
+  blue: '#fbff00'
 });

@@ -27,20 +27,7 @@ export const GlobalStyles = createGlobalStyle`
     flex-direction: column;
   }
    
-  #url-assets ul {
-    list-style-type: none;
-    display: inline;  
-    padding: 0px 0px 0px 0px; 
-  }
-  
-  #url-assets li {
-    list-style-type: none;
-    display: inline;  
-    padding: 0px 20px 0px 20px; 
-    color:  rgb(0, 119, 255);
-  }
-  
-  body {background:#ccc}
+  body {}
   
   .box h3{
     text-align:center;
