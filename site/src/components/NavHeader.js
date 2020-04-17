@@ -6,7 +6,6 @@ import ColourPalette from './ColourPalette'
 
 
 class NavHeader extends React.Component {
-
     render(){
         return(
           <Navbar bg="dark" variant="dark">
