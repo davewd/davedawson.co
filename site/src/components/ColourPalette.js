@@ -8,8 +8,13 @@ const StyledColourPaletteWrapper = styled.div`
   button {
     background-color: Transparent;
     color: ${textColor};
-    border: none
+    border: none;
+    outline: none;
   }
+  button:focus {
+    outline:0;
+  }
+
   ul {
     list-style-type: none;
     display: inline;  
