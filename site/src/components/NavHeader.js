@@ -11,6 +11,7 @@ const NavWrapper = styled.div`
    
 div{ 
   display: inline;
+  width: 100%;
   background: ${backgroundColor};
   padding: 10px 20px 10px 20px;
  
