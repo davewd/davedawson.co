@@ -8,16 +8,17 @@ const ThemeToggleContext = React.createContext();
 
 export const useTheme = () => React.useContext(ThemeToggleContext);
 
+const Wrapper = styled.div`
+background-color: ${backgroundColor};
+color: ${textColor};
+`;
 export const MyThemeProvider = ({ children }) => {
 
   const [themeState, setThemeState] = React.useState({
     mode: 'light'
   });
 
-  const Wrapper = styled.div`
-    background-color: ${backgroundColor};
-    color: ${textColor};
-  `;
+
 
   const toggle = () => {
     // Sets the context data - using the concept of a React Context
