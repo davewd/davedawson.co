@@ -18,6 +18,7 @@ const StyledWrapper = styled.div`
     justify-content: center;
     text-align: center;
     display: flex;
+    margin: 20px;
     flex-direction: column;`
 
 class Landing extends React.Component{
