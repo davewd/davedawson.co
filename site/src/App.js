@@ -11,6 +11,10 @@ import beach from "./assets/beach.jpeg"
 function App (props) {
   const themeToggle = useTheme();
 
+  const Footer = styled.div`
+  text-align: center
+  `
+
   const Button = styled.button`
     background: ${buttonBackgroundColor};
     border: none;
@@ -33,14 +37,12 @@ function App (props) {
 
         <Landing/>
         <Sticky>
-        <NavHeader/>
+          <NavHeader/>
         </Sticky>
-        <div>
           <img src={beach} width="100%" />
-        </div>        
       </Cell>
       <Cell ><sidebar className="App-sidebar"/></Cell>
-      <Cell width={3} ><OnlineIdentities/></Cell>
+      <Cell width={3} ><Footer><p>Made by a dad for his family..</p></Footer></Cell>
       </Grid>
       </div>
   );
