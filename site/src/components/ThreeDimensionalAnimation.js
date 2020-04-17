@@ -1,12 +1,9 @@
 import React, { useRef, useState } from 'react'
 import { Canvas, useFrame } from 'react-three-fiber'
 import styled, {withTheme} from 'styled-components'
-import ReactDOM from "react-dom"
-import { useTheme } from '../styling/ThemeContext';
 import { backgroundColor, textColor } from '../styling/theme';
 
 const StyledThreeDimensionalAnimationWrapper = styled.div`
-font-face: 'bold'
 `;
 
 function Box(props) {
