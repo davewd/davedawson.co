@@ -1,48 +1,38 @@
 import React from 'react';
-import {Landing, NavHeader, OnlineIdentities} from './components'
+import {Landing, NavHeader, Footer} from './components'
 import { Grid, Cell } from 'styled-css-grid';
 import styled, { withTheme } from 'styled-components';
 import { GlobalStyles } from './styling/global';
-import { buttonBackgroundColor, buttonTextColor } from './styling/theme';
-import { useTheme } from './styling/ThemeContext';
 import Sticky from "react-stickynode"
 import beach from "./assets/beach.jpeg"
 
+const Sidebar = styled.div`
+background-color:  rgb(0, 119, 255);
+height: 100%;
+width: 100%;
+display: flex;
+flex-direction: column;
+`;
+
 function App (props) {
-  const themeToggle = useTheme();
-
-  const Footer = styled.div`
-  text-align: center
-  `
-
-  const Button = styled.button`
-    background: ${buttonBackgroundColor};
-    border: none;
-    border-radius: 0.3em;
-    box-shadow: none;
-    color: ${buttonTextColor};
-    cursor: pointer;
-    font-size: 1em;
-    padding: 0.5em 1em;
-  `;
   
   return (
     <div>
       <GlobalStyles/>
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />  
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossOrigin="anonymous" />  
       <Grid columns={"100px 1fr 100px"} rows={"minmax(45px,auto) 1fr minmax(45px,auto)"}>
-      <Cell><sidebar className="App-sidebar"/></Cell>
+      <Cell><Sidebar/></Cell>
       <Cell>
 
         <Landing/>
         <Sticky>
           <NavHeader/>
         </Sticky>
-          <img src={beach} width="100%" />
+          <img src={beach} width="100%" alt="the beach"/>
       </Cell>
-      <Cell ><sidebar className="App-sidebar"/></Cell>
-      <Cell width={3} ><Footer><p>Made by a dad for his family..</p></Footer></Cell>
+      <Cell ><Sidebar/></Cell>
+      <Cell width={3} ><Footer/></Cell>
       </Grid>
       </div>
   );
