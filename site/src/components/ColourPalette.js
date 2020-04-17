@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPalette} from '@fortawesome/free-solid-svg-icons'
 import styled from 'styled-components'
 import { useTheme } from '../styling/ThemeContext';
-import { backgroundColor, textColor} from '../styling/theme'
+import {textColor} from '../styling/theme'
 const StyledColourPaletteWrapper = styled.div`
   button {
     background-color: Transparent;
