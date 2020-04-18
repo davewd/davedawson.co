@@ -7,6 +7,7 @@ const FooterWrapper = styled.div`
     display: block;
     text-align: center;
     align-items: center;
+    font-size: 20pt
     `;
 
 const Footer = function(props) {
