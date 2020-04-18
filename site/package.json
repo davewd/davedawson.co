@@ -15,6 +15,7 @@
     "react-fontawesome": "^1.7.1",
     "react-scripts": "^3.4.1",
     "react-three-fiber": "^4.0.28",
+    "react-typist": "^2.0.5",
     "styled-components": "5.0.1",
     "styled-css-grid": "^1.2.1",
     "styled-grid-component": "^1.1.13",
