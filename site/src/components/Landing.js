@@ -59,6 +59,7 @@ const Landing = function(props){
               &nbsp;&nbsp;
               <Typist cursor={{ hideWhenDone: true }} avgTypingSpeed={15000} startDelay={1000} onTypingDone={() => setTextIndex(textIndex + 1)}>
               {
+                /* RESTART: https://codesandbox.io/s/happy-zhukovsky-rycur */
                 typedtext.map(function(item){
                   return(
                 <span key={item.id}>
