@@ -15,7 +15,7 @@ const Footer = function(props) {
 return(
     <FooterWrapper>
         <div>
-        <EmojioneV4 size={128} text="Made with :red_heart: in :flag_australia: by a :nerd_face: for his :family_(man,_woman,_girl):" />
+        <EmojioneV4 size={128} text="Made down under :crocodile: by a :nerd_face: for his :family_(man,_woman,_girl):" />
         </div>
     </FooterWrapper>
 )
