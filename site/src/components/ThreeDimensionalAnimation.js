@@ -1,10 +1,33 @@
-import React, { useRef, useState } from 'react'
-import { Canvas, useFrame } from 'react-three-fiber'
+import React, { useRef, useState, useEffect } from 'react'
+import { Canvas, useThree, useFrame, extend } from 'react-three-fiber'
 import styled, {withTheme} from 'styled-components'
 import { backgroundColor, textColor } from '../styling/theme';
+import { Model } from './3d-helpers'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
+
+// Make OrbitControls known as <orbitControls />
+extend({ OrbitControls })
 
 const StyledThreeDimensionalAnimationWrapper = styled.div`
+width: 100%
 `;
+
+const CameraController = () => {
+  const { camera, gl } = useThree();
+  useEffect(
+    () => {
+      const controls = new OrbitControls(camera, gl.domElement);
+
+      controls.minDistance = 50;
+      controls.maxDistance = 50;
+      return () => {
+        controls.dispose();
+      };
+    },
+    [camera, gl]
+  );
+  return null;
+};
 
 function Box(props) {
 
@@ -33,13 +56,16 @@ function Box(props) {
 }
 
 function ThreeDimensionalAnimation(props) {
+  const { camera, domElement } = useThree()
     return(
         <StyledThreeDimensionalAnimationWrapper>
             <Canvas >
+                <CameraController />
                 <ambientLight />
-                <pointLight position={[10, 10, 10]} />
-                <Box position={[-3, 0, 0]} {...props} />
-                <Box position={[3, 0, 0]} {...props}/>
+                <pointLight position={[10, 100, 100]} />
+                <Model url='./assets/male_head.obj'/>
+                {/*<Box position={[-3, 0, 0]} {...props} />
+                <Box position={[3, 0, 0]} {...props}/>*/}
             </Canvas>
         </StyledThreeDimensionalAnimationWrapper>
     )
