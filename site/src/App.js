@@ -1,10 +1,11 @@
 import React from 'react';
-import {Landing, NavHeader, Footer} from './components'
+import {StyledSection, Landing, NavHeader, Footer} from './components'
 import { Grid, Cell } from 'styled-css-grid';
 import styled, { withTheme } from 'styled-components';
 import { GlobalStyles } from './styling/global';
 import Sticky from "react-stickynode"
-import beach from "./assets/beach.jpeg"
+
+/*import beach from "./assets/beach.jpeg"*/
 
 const Sidebar = styled.div`
 background-color:  rgb(0, 119, 255);
@@ -24,12 +25,34 @@ function App (props) {
       <Grid columns={"100px 1fr 100px"} rows={"minmax(45px,auto) 1fr minmax(45px,auto)"}>
       <Cell><Sidebar/></Cell>
       <Cell>
-
-        <Landing/>
+        <StyledSection>
+          <Landing/>
+        </StyledSection>
         <Sticky>
           <NavHeader/>
         </Sticky>
-          <img src={beach} width="100%" alt="the beach"/>
+        <StyledSection>
+          <a></a>
+          <h1>Performance Dashboard</h1>
+        </StyledSection>
+        <StyledSection>
+          <h1>Portfolio</h1>
+        </StyledSection>
+        <StyledSection>
+          <h1>Project List</h1>
+        </StyledSection>
+        <StyledSection>
+          <h1>Fitness</h1>
+        </StyledSection>
+        <StyledSection>
+          <h1>Cooking</h1>
+        </StyledSection>
+        <StyledSection>
+          <h1>Blog</h1>
+        </StyledSection>
+        <StyledSection>
+          <img src="./assets/beach.jpeg" width="100%" alt="the beach"/>
+        </StyledSection>
       </Cell>
       <Cell ><Sidebar/></Cell>
       <Cell width={3} ><Footer/></Cell>
