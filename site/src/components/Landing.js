@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import React, { useState } from 'react'
 import ThreeDimensionalAnimation from './ThreeDimensionalAnimation'
-import {boxBackgroundColor, boxShadowColor} from '../styling/theme'
+import {boxBackgroundColor, boxShadowColor, backgroundColor} from '../styling/theme'
 import Typist from 'react-typist'
 
 const ShadowBox = styled.div`
@@ -14,6 +14,46 @@ const ShadowBox = styled.div`
       margin: 0;
       text-align: center;
       justify-content: center;
+      vertical-align: center;
+`;
+
+const GlossyBox = styled.div`
+  text-align: center;
+  justify-content: center;
+  width: 60vw;
+  height: 60vh;
+  background-color: #E0E2E5;
+  border-radius: 25px;
+  border: .25px solid #BDC1CC;
+  
+  display: flex;
+  flex-direction: column;
+  box-shadow: 
+  0px 0px 10px #BDC1CC,
+  inset 0 0 10px rgba(0,0,0,.6);
+  ;
+  `;
+
+const GlossyHighlight = styled.div`
+ position: relative;
+  padding: 2 2 2 2;
+  top: 2px;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 95%;
+  height: 950%;
+  opacity: .92;
+  border-radius: 25px;
+  
+  /* gratuitous gradient compatibility - activate! */
+  background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(left top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
 `;
 
 const StyledTypingWrapper = styled.div`
@@ -29,6 +69,8 @@ const StyledTypingWrapper = styled.div`
       flex-direction: row;
     }
 `;
+
+
 
 var typedtext = [
   {id: '0', text: 'Mentor'},
@@ -46,7 +88,11 @@ const Landing = function(props){
   const [textIndex, setTextIndex] = useState(0);
 
         return(
-          <ShadowBox>
+          <>
+          <br/>
+          <br/>
+          <GlossyBox>
+          <GlossyHighlight />
             <ThreeDimensionalAnimation vertices={[[-1, 0, 0], [0, 1, 0], [1, 0, 0], [0, -1, 0], [-1, 0, 0]]}/>
             <br/>
             <p>
@@ -73,8 +119,10 @@ const Landing = function(props){
               }
               </Typist>
             </StyledTypingWrapper>
-          </ShadowBox>
+          </GlossyBox>
+          </>
         )
 }
 
-export default styled(Landing)``;
+export default styled(Landing)`
+`;

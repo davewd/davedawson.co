@@ -38,7 +38,7 @@ a {
 
 a:Hover {
   text-decoration: none;
-  color: ${linkHoverColor};
+  color: ${textColor};
 }
 `
 
