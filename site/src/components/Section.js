@@ -22,10 +22,15 @@ Section.propTypes = {
 
 const StyledSection = styled(Section)`
     margin: 0;
-    display: block;
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
     height: 100vh;
+    width: 100%;
     background-color: ${backgroundColor};
+    text-align: center;
+    align-items: center;
+
 `;
 
 export default StyledSection
