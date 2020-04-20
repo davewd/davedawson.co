@@ -39,20 +39,26 @@ function App (props) {
         </StyledSection>
         <StyledSection path="/portfolio">
           <h1>Portfolio</h1>
+          <p></p>
         </StyledSection>
         <StyledSection path="/project_list">
           <h1>Project List</h1>
+          <p>An attempt to hold myself accountable for the ideas that float freely.</p>
         </StyledSection>
         <StyledSection path="/fitness">
           <h1>Fitness</h1>
+          <p>The eternal fountain of youth</p>
         </StyledSection>
         <StyledSection path="/cooking">
           <h1>Cooking</h1>
+          <p>Teaching my children to think critically.</p>
         </StyledSection>
         <StyledSection path="/blog">
           <h1>Blog</h1>
+          <p>Cementing yet more erroneous narcissism into annals of history</p>
         </StyledSection>
         <StyledSection path="/gallery">
+          {/*https://css-tricks.com/making-a-realistic-glass-effect-with-svg/*/}
           <img src="./assets/beach.jpeg" width="100%" alt="the beach"/>
         </StyledSection>
         <Redirect from="/" to="/overview" />
