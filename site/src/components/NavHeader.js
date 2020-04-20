@@ -3,6 +3,7 @@ import OnlineIdentities from './OnlineIdentities'
 import ColourPalette from './ColourPalette'
 import styled from 'styled-components'
 import { textColor, backgroundColor } from '../styling/theme'
+import { Link } from "react-router-dom";
 
 const NavWrapper = styled.div`
     width: 100%;
@@ -11,7 +12,6 @@ const NavWrapper = styled.div`
    
 div{ 
   display: inline;
-  width: 100%;
   background: ${backgroundColor};
   padding: 10px 20px 10px 20px;
  
@@ -28,7 +28,7 @@ li {
   padding: 0px 20px 0px 20px; 
 }
 
-a {
+Link {
     color: ${textColor}
     }
 `
@@ -38,15 +38,15 @@ class NavHeader extends React.Component {
         return(
           <NavWrapper>
             <div>
-            <ul>
-              <li><a href="#overview">Overview</a></li>
-              <li><a href="#performance">Performance Dashboard</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#project_list">Project list</a></li>
-              <li><a href="#fitness">Fitness</a></li>
-              <li><a href="#cooking">Cooking</a></li>
-              <li><a href="#blog">Blog</a></li>
-            </ul>
+              <ul>
+                <li><Link to="/overview">Overview</Link></li>
+                <li><Link to="/performance">Performance Dashboard</Link></li>
+                <li><Link to="/portfolio">Portfolio</Link></li>
+                <li><Link to="/project_list">Project list</Link></li>
+                <li><Link to="/fitness">Fitness</Link></li>
+                <li><Link to="/cooking">Cooking</Link></li>
+                <li><Link to="/blog">Blog</Link></li>
+              </ul>
             <OnlineIdentities/>
             <ColourPalette/>
             </div>

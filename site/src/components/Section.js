@@ -3,19 +3,21 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components'
 import {backgroundColor} from '../styling/theme'
 import { Spring } from 'react-spring/renderprops'
+import { Route } from "react-router-dom";
 
-const Section = ({ className, children }) => {
+const Section = props => {
     return (
-        
-            <div className={className}>
-                {children}
+        <Route path={props.path} className={props.className}>
+            <div {...props} className={props.className}>
+            {console.log(props.className)}
+                {props.children}
             </div>
-        
+        </Route>
     );
 };
 
 Section.propTypes = {
-    
+
 };
 
 const StyledSection = styled(Section)`
