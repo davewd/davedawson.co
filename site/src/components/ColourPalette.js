@@ -10,6 +10,7 @@ const StyledColourPaletteWrapper = styled.div`
     color: ${textColor};
     border: none;
     outline: none;
+    font-size: 16px;    
   }
   button:focus {
     outline:0;

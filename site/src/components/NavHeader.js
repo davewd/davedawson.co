@@ -2,14 +2,17 @@ import React from 'react';
 import OnlineIdentities from './OnlineIdentities'
 import ColourPalette from './ColourPalette'
 import styled from 'styled-components'
-import { textColor, backgroundColor } from '../styling/theme'
+import { textColor, linkHoverColor, backgroundColor } from '../styling/theme'
 import { Link } from "react-router-dom";
 
 const NavWrapper = styled.div`
     width: 100%;
     display: flex;
     flex-direction: row;
-   
+    border-color:rgb(0, 123, 255);
+    border-style:none;
+    border-width:0px;
+    line-height: 24px;
 div{ 
   display: inline;
   background: ${backgroundColor};
@@ -25,12 +28,18 @@ ul {
 li {
   list-style-type: none;
   display: inline;  
-  padding: 0px 20px 0px 20px; 
+  padding: 10px 20px 10px 20px; 
 }
 
-Link {
-    color: ${textColor}
+a {
+    color: ${textColor};
+    text-decoration: none;
     }
+
+a:Hover {
+  text-decoration: none;
+  color: ${linkHoverColor};
+}
 `
 
 class NavHeader extends React.Component {

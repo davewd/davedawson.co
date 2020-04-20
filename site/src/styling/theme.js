@@ -41,3 +41,10 @@ export const buttonTextColor = theme('mode', {
   yellow: '#0077ff',
   blue: '#fbff00'
 });
+
+export const linkHoverColor = theme('mode', {
+  light: '#0077ff',
+  dark: '#fbff00',
+  yellow: '#777',
+  blue: '#fff'
+});

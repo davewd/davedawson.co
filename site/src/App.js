@@ -20,10 +20,10 @@ flex-direction: column;
 function App (props) {
 
   return (
-    <>
+    <div className={props.className}>
       <GlobalStyles/>
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossOrigin="anonymous" />
+
+
       <Grid columns={"100px 1fr 100px"} rows={"minmax(45px,auto) 1fr minmax(45px,auto)"}>
       <Cell><Sidebar/></Cell>
       <Cell>
@@ -61,8 +61,22 @@ function App (props) {
       <Cell ><Sidebar/></Cell>
       <Cell width={3} ><Footer/></Cell>
       </Grid>
-      </>
+      </div>
   );
 }
 
-export default withTheme(App);
+export default styled(App)`
+font-size:16px;
+font-stretch:100%;
+font-style:normal;
+font-variant-caps:normal;
+font-variant-east-asian:normal;
+font-variant-ligatures:normal;
+font-variant-numeric:normal;
+font-weight:400;
+font-family:-apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+h1 {
+  font-size: 40px
+}
+`;
