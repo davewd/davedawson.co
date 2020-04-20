@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faPalette} from '@fortawesome/free-solid-svg-icons'
 import styled from 'styled-components'
 import { useTheme } from '../styling/ThemeContext';
-import {textColor} from '../styling/theme'
+import {textColor, linkHoverColor} from '../styling/theme'
 const StyledColourPaletteWrapper = styled.div`
   button {
     background-color: Transparent;
@@ -14,6 +14,10 @@ const StyledColourPaletteWrapper = styled.div`
   }
   button:focus {
     outline:0;
+  }
+
+  button:hover {
+    color: ${linkHoverColor};
   }
 
   ul {
