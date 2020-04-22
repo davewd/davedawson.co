@@ -33,5 +33,27 @@
     "links": [
       { "url": "http://www.github.com/davewd/quotes", "text": "Github" }
     ]
+  },
+  {
+    "key": 3,
+    "name": "The Perfect Pizza",
+    "description": "Peperoni & Jalapeño",
+    "categories": ["opensource", "writing", "food" ],
+    "status": "complete",
+    "progress_percentage": 1,
+    "links": [
+      { "url": "http://www.github.com/davewd/pizza", "text": "Github" }
+    ]
+  },
+  {
+    "key": 4,
+    "name": "Sourdough",
+    "description": "to be determined",
+    "categories": ["opensource", "writing", "food" ],
+    "status": "started",
+    "progress_percentage": 0.01,
+    "links": [
+      { "url": "http://www.github.com/davewd/sourdough", "text": "Github" }
+    ]
   }
 ]
