@@ -22,5 +22,16 @@
       { "url": "http://www.github.com/davewd/sho", "text": "Github" },
       { "url": "https://pypi.org/project/sho/", "text": "PyPI" }
     ]
+  },
+  {
+    "key": 2,
+    "name": "Quotes",
+    "description": "A collection of my favourite quotes - never complete but always 100%",
+    "categories": ["opensource", "writing"],
+    "status": "incomplete",
+    "progress_percentage": 1,
+    "links": [
+      { "url": "http://www.github.com/davewd/quotes", "text": "Github" }
+    ]
   }
 ]
