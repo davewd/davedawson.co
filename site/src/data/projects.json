@@ -1,0 +1,26 @@
+[
+  {
+    "key": 0,
+    "name": "davedawson.co",
+    "description": "A very personal site. My first foray into REACT",
+    "categories": ["personal"],
+    "status": "",
+    "progress_percentage": 0.1,
+    "links": [
+      { "url": "http://www.github.com/davewd/davedawson.co", "text": "Github" },
+      { "url": "http://www.davedawson.co", "text": "Site" }
+    ]
+  },
+  {
+    "key": 1,
+    "name": "sho",
+    "description": "A simpler way to view DataFrames",
+    "categories": ["opensource", "infrastructure"],
+    "status": "",
+    "progress_percentage": 0.4,
+    "links": [
+      { "url": "http://www.github.com/davewd/sho", "text": "Github" },
+      { "url": "https://pypi.org/project/sho/", "text": "PyPI" }
+    ]
+  }
+]

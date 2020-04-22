@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyledSection, Landing, NavHeader, Footer} from './components'
+import {StyledSection, Landing, NavHeader, Footer, ProjectList} from './components'
 import { Grid, Cell } from 'styled-css-grid';
 import styled, { withTheme } from 'styled-components';
 import { GlobalStyles } from './styling/global';
@@ -44,6 +44,7 @@ function App (props) {
         <StyledSection path="/project_list">
           <h1>Project List</h1>
           <p>An attempt to hold myself accountable for the ideas that float freely.</p>
+          <ProjectList/>
         </StyledSection>
         <StyledSection path="/fitness">
           <h1>Fitness</h1>
