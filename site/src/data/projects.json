@@ -15,7 +15,7 @@
     "key": 1,
     "name": "sho",
     "description": "A simpler way to view DataFrames",
-    "categories": ["opensource", "infrastructure"],
+    "categories": ["opensource", "infrastructure", "python"],
     "status": "",
     "progress_percentage": 0.4,
     "links": [
