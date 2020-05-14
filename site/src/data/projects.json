@@ -20,7 +20,8 @@
     "progress_percentage": 0.4,
     "links": [
       { "url": "http://www.github.com/davewd/sho", "text": "Github" },
-      { "url": "https://pypi.org/project/sho/", "text": "PyPI" }
+      { "url": "https://pypi.org/project/sho/", "text": "PyPI" },
+      { "url": "https://pypistats.org/packages/sho", "text": "Downloads"}
     ]
   },
   {
