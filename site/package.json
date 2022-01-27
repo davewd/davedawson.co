@@ -23,7 +23,7 @@
     "styled-css-grid": "^1.2.1",
     "styled-grid-component": "^1.1.13",
     "styled-theming": "^2.2.0",
-    "three": "^0.125.0"
+    "three": "^0.137.0"
   },
   "scripts": {
     "start": "react-scripts start",
